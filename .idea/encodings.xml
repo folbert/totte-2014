@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/Gruntfile.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assets/js/_main.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assets/less/main.less" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assets/vendor/bootstrap/less/variables.less" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/base.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/functions.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lib/nav.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lib/scripts.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lib/totte.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lib/wp_bootstrap_navwalker.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/package.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/style.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/template-start-page.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/templates/header.php" charset="UTF-8" />
+  </component>
+</project>
+

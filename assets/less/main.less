@@ -1,0 +1,137 @@
+// Bootstrap
+@import "_bootstrap";
+
+// Roots
+@import "_global";                   // Base styling & custom mixins
+@import "components/_buttons";       // Button tweaks
+@import "components/_forms";         // Form tweaks
+@import "components/_media";         // WordPress media
+@import "components/_wp-classes";    // WordPress generated classes
+@import "layouts/_general";          // General styling
+@import "layouts/_header";           // Header styling
+@import "layouts/_sidebar";          // Sidebar styling
+@import "layouts/_footer";           // Footer styling
+@import "layouts/_pages";            // Page styling
+@import "layouts/pages/_home";       // Home page styling
+@import "layouts/_posts";            // Post styling
+
+body {
+  padding-top: 56px;
+}
+
+.navbar {
+  margin-bottom: 0;
+  border-bottom: solid 6px #6fb052;
+}
+
+.page-template-template-start-page-php {
+
+  .navbar {
+
+    z-index: 3;
+
+    .logo-wrapper {
+      position: relative;
+      width: 48px;
+      height: @navbar-height;
+      overflow: hidden;
+      margin-left: -15px;
+    }
+
+  }
+
+  .navbar-brand {
+    transition: bottom 0.5s;
+    display: block;
+    position: absolute;
+    bottom: -60px;
+    width: 48px;
+    height: 0;
+    padding: 48px 0 0;
+    overflow: hidden;
+    background: url('img/totte-logga-40px.png') no-repeat;
+  }
+
+  &.scrolled {
+
+    .navbar-brand {
+      bottom: 0;
+    }
+
+  }
+
+  .hero {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+
+    h1 span,
+    .h1 {
+      font-size: @font-size-h3;
+      display: inline-block;
+      padding: 8px;
+      background: rgba(0, 0, 0, 0.4);
+      margin-bottom: 0;
+      margin-top: 0;
+      color: #fff;
+      line-height: 1;
+    }
+
+    h1 {
+      font-size: @font-size-h3;
+    }
+
+    h1 {
+      margin: 0;
+
+      .h1-main {
+        font-size: @font-size-h1;
+      }
+
+    }
+
+  }
+
+  .large-logo-wrapper {
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    background: url('img/totte-logga.png') no-repeat center center;
+    border-radius: 95px;
+    top: 12px;
+    border: solid 6px #6fb052;
+    z-index: 4; // Lets have these elements over the hero background
+
+    span {
+      display: none;
+    }
+
+  }
+
+  .outer-wrap {
+    position: relative;
+    z-index: 2;
+    border-top: solid 6px #6fb052;
+    margin-top: -95px;
+    background: #fff;
+  }
+
+}
+
+h1 {
+  font-family: 'Shadows Into Light', cursive;
+  color: #6fb052;
+  font-weight: 800;
+  border: none;
+}
+
+@media (min-width: 768px) {
+
+  .navbar > .container .navbar-brand,
+  .navbar > .container-fluid .navbar-brand {
+    margin-left: 0px;
+  }
+
+}
