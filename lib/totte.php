@@ -29,3 +29,5 @@ function totte_widgets_init() {
 
 }
 add_action( 'widgets_init', 'totte_widgets_init' );
+
+add_filter('widget_text', 'do_shortcode');

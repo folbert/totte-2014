@@ -20,42 +20,66 @@ body {
 }
 
 .navbar {
+
+  a {
+    text-decoration: none;
+  }
+
   margin-bottom: 0;
   border-bottom: solid 6px #6fb052;
+  z-index: 5;
+
+  .logo-wrapper {
+    position: relative;
+    width: 48px;
+    height: @navbar-height;
+    overflow: hidden;
+    margin: 0 15px;
+    //margin: 0 15px 0 15px;
+  }
+
+}
+
+.navbar-brand {
+  display: block;
+  position: absolute;
+  bottom: 6px;
+  width: 48px;
+  height: 0;
+  padding-top: 48px;
+  padding-bottom: 0;
+  overflow: hidden;
+  background: url('img/totte-logga-40px.png') no-repeat;
 }
 
 .page-template-template-start-page-php {
 
-  .navbar {
-
-    z-index: 3;
-
-    .logo-wrapper {
-      position: relative;
-      width: 48px;
-      height: @navbar-height;
-      overflow: hidden;
-      margin-left: -15px;
-    }
-
+  h1 {
+    font-size: 24px;
+    line-height: 1.4em;
   }
 
   .navbar-brand {
     transition: bottom 0.5s;
-    display: block;
-    position: absolute;
     bottom: -60px;
-    width: 48px;
-    height: 0;
-    padding: 48px 0 0;
-    overflow: hidden;
-    background: url('img/totte-logga-40px.png') no-repeat;
   }
 
   &.scrolled {
 
     .navbar-brand {
-      bottom: 0;
+      bottom: 6px;
+    }
+
+  }
+
+  .start-sidebar {
+
+    ul {
+      .list-unstyled;
+    }
+
+    li {
+      margin-bottom: 8px;
     }
 
   }
@@ -66,6 +90,19 @@ body {
     width: 100%;
     background-size: cover;
     background-position: center center;
+    min-height: 300px;
+
+    h1 {
+      font-size: 18px;
+      margin: 0;
+      border: none;
+
+      .h1-main {
+        font-size: @font-size-h1;
+      }
+
+
+    }
 
     h1 span,
     .h1 {
@@ -79,19 +116,6 @@ body {
       line-height: 1;
     }
 
-    h1 {
-      font-size: @font-size-h3;
-    }
-
-    h1 {
-      margin: 0;
-
-      .h1-main {
-        font-size: @font-size-h1;
-      }
-
-    }
-
   }
 
   .large-logo-wrapper {
@@ -99,9 +123,10 @@ body {
     width: 190px;
     height: 190px;
     background: url('img/totte-logga.png') no-repeat center center;
-    border-radius: 95px;
-    top: 12px;
-    border: solid 6px #6fb052;
+    //border-radius: 95px;
+    top: 32px;
+    opacity: .9;
+    //border: solid 6px #6fb052;
     z-index: 4; // Lets have these elements over the hero background
 
     span {
@@ -122,9 +147,22 @@ body {
 
 h1 {
   font-family: 'Shadows Into Light', cursive;
-  color: #6fb052;
   font-weight: 800;
   border: none;
+}
+
+h1,
+h2 {
+  color: #6fb052;
+}
+
+a {
+ text-decoration: underline;
+}
+
+.page-header {
+  margin: 20px 0 0;
+  padding-bottom: 0;
 }
 
 @media (min-width: 768px) {
@@ -132,6 +170,95 @@ h1 {
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
     margin-left: 0px;
+  }
+
+}
+
+.main {
+  padding: 0 0 18px;
+}
+
+footer {
+  padding: 18px 0;
+  background: #ace190;
+  border-top: solid 6px #6fb052;
+}
+
+.navbar-nav {
+
+  li {
+    font-weight: bold;
+  }
+
+  a::after {
+    display: block;
+    margin-bottom: -18px;
+    width: 100%;
+    text-align: center
+  }
+
+  .active a::after {;
+    content: '●' !important;
+  }
+
+  a:hover::after {
+    content: '•';
+  }
+
+}
+
+iframe {
+  width: 100%;
+}
+
+.eo-event-future {
+  margin-bottom: 12px;
+}
+
+@media (min-width: 768px) {
+
+  .navbar {
+
+    .logo-wrapper {
+      margin-left: 0;
+    }
+
+  }
+
+}
+
+@media (min-width: @screen-sm-min) {
+
+  .navbar {
+
+    .logo-wrapper {
+      margin-left: 0;
+    }
+
+  }
+
+}
+
+@media (min-width: @screen-md-min) {
+
+  .page-template-template-start-page-php {
+
+    h1 {
+      font-size: 36px;
+    }
+
+  }
+
+}
+
+@media (min-width: @screen-lg-min) {
+
+  .page-template-template-start-page-php {
+
+    h1 {
+      font-size: 44px;
+    }
+
   }
 
 }

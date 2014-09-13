@@ -7,6 +7,8 @@
     <file url="file://$PROJECT_DIR$/assets/vendor/bootstrap/less/variables.less" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/base.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/functions.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lib/config.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/lib/init.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lib/nav.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lib/scripts.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/lib/totte.php" charset="UTF-8" />
@@ -14,6 +16,7 @@
     <file url="file://$PROJECT_DIR$/package.json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/style.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/template-start-page.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/templates/footer.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/templates/header.php" charset="UTF-8" />
   </component>
 </project>

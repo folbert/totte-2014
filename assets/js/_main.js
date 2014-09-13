@@ -32,46 +32,55 @@ var Roots = {
 
       var $bodyElm = $('body');
       var $heroElm = $('.hero');
+      var $heroElmMinHeight = parseInt($heroElm.css('min-height'));
       var $windowElm = $(window);
       var $outerWrapElm = $('.outer-wrap');
-      //var $largeLogoWrapper = $('.large-logo-wrapper');
-      var $heroElmBottom;
+      var $largeLogoWrapper = $('.large-logo-wrapper');
+      var $largeLogoWrapperBottom;
+      var $heroElmBgOriginalWidth = $heroElm.attr('data-bgoriginalwidth');
 
       $windowElm.on('resize', function() {
 
-        var $heroElmHeight = $windowElm.height()*0.5;
+        var $heroElmHeight = $windowElm.height()*0.4;
+
+        if($heroElmHeight < $heroElmMinHeight) {
+          $heroElmHeight = $heroElmMinHeight;
+        }
 
         $heroElm.css('height', $heroElmHeight);
-        $heroElmBottom = $windowElm.height() - $heroElm.offset().top - $heroElm.height();
+        $largeLogoWrapperBottom = ($largeLogoWrapper.offset().top + $largeLogoWrapper.height()) - 120;
         $outerWrapElm.css('margin-top', $heroElmHeight-2 + 'px');
         $heroElm.css('background-size', 'cover');
-
 
       }).trigger('resize');
 
 
       $windowElm.on('scroll', function() {
 
-        var windowScrollTop = $windowElm.scrollTop();
-        var heroBgSize = 100+((windowScrollTop*($heroElm.height()-58)*0.002));
+        if($windowElm.width() > $heroElmBgOriginalWidth) {
 
-        if(($windowElm.width() > $heroElm.height()) && heroBgSize >= 100) {
+          var windowScrollTop = $windowElm.scrollTop();
+          var heroBgSize = 100+((windowScrollTop*($heroElm.height()-58)*0.002));
 
-          $heroElm.css('background-size', heroBgSize + '%');
+          if(($windowElm.width() > $heroElm.height()) && heroBgSize >= 100) {
 
-        }
-
-        if(windowScrollTop > $heroElmBottom) {
-
-          if(!$bodyElm.hasClass('scrolled')) {
-
-            $bodyElm.addClass('scrolled');
+            $heroElm.css('background-size', heroBgSize + '%');
 
           }
 
-        } else if($bodyElm.hasClass('scrolled')) {
+          if(windowScrollTop > $largeLogoWrapperBottom) {
 
-          $bodyElm.removeClass('scrolled');
+            if(!$bodyElm.hasClass('scrolled')) {
+
+              $bodyElm.addClass('scrolled');
+
+            }
+
+          } else if($bodyElm.hasClass('scrolled')) {
+
+            $bodyElm.removeClass('scrolled');
+
+          }
 
         }
 

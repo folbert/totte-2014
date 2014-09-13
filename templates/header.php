@@ -7,10 +7,10 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <div class="logo-wrapper"><a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a></div>
+      <div class="logo-wrapper"><a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>" title="Startsidan"><?php bloginfo('name'); ?></a></div>
     </div>
 
-    <nav class="collapse navbar-collapse navbar-right" role="navigation">
+    <nav class="collapse navbar-collapse" role="navigation">
       <?php
         if (has_nav_menu('primary_navigation')) :
           wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav', 'walker' => new wp_bootstrap_navwalker()));
@@ -20,7 +20,11 @@
   </div>
 </header>
 
-<div class="hero" style="background-image: url('http://privat.fsktotte.se/wp-content/themes/totte2014/assets/img/dev/gladatottebarn.jpg'); height: 400px">
+<?php
+if(is_front_page()) {
+?>
+
+<div class="hero" style="background-image: url('http://privat.fsktotte.se/wp-content/themes/totte2014/assets/img/dev/gladatottebarn.jpg'); height: 400px" data-bgoriginalwidth="604">
   <div class="container">
 
     <?php
@@ -43,3 +47,7 @@
     </div>
   </div>
 </div>
+
+<?php
+} // is_home();
+ ?>
