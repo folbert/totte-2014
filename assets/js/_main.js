@@ -48,7 +48,7 @@ var Roots = {
         }
 
         $heroElm.css('height', $heroElmHeight);
-        $largeLogoWrapperBottom = ($largeLogoWrapper.offset().top + $largeLogoWrapper.height()) - 120;
+        $largeLogoWrapperBottom = ($largeLogoWrapper.offset().top + $largeLogoWrapper.height()) - 140;
         $outerWrapElm.css('margin-top', $heroElmHeight-2 + 'px');
         $heroElm.css('background-size', 'cover');
 

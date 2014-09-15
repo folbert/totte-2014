@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <div class="logo-wrapper"><a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>" title="Startsidan"><?php bloginfo('name'); ?></a></div>
+      <div class="logo-wrapper"><a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>" title="Startsidan"><?php //bloginfo('name'); ?>Förskolan Totte</a></div>
     </div>
 
     <nav class="collapse navbar-collapse" role="navigation">
@@ -16,7 +16,13 @@
           wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav', 'walker' => new wp_bootstrap_navwalker()));
         endif;
       ?>
+
+      <ul class="nav navbar-nav navbar-right menu-2">
+        <li><div class="fb-like" data-href="https://www.facebook.com/fsktotte" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div></li>
+      </ul>
+
     </nav>
+
   </div>
 </header>
 
@@ -42,7 +48,7 @@ if(is_front_page()) {
   <div class="row">
     <div class="col-xs-12">
       <div class="large-logo-wrapper">
-        <span>Förskolan Totte</span>
+        <span>Välkommen till Förskolan Totte i Staffanstorp!</span>
       </div>
     </div>
   </div>

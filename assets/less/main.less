@@ -15,41 +15,46 @@
 @import "layouts/pages/_home";       // Home page styling
 @import "layouts/_posts";            // Post styling
 
+@import "_bootstrap_variables";
+
+.funny-header {
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: 800;
+}
+
 body {
-  padding-top: 56px;
+  padding-top: @navbar-height;
 }
 
 .navbar {
-
-  a {
-    text-decoration: none;
-  }
 
   margin-bottom: 0;
   border-bottom: solid 6px #6fb052;
   z-index: 5;
 
+  a {
+    text-decoration: none;
+  }
+
   .logo-wrapper {
-    position: relative;
-    width: 48px;
-    height: @navbar-height;
-    overflow: hidden;
     margin: 0 15px;
-    //margin: 0 15px 0 15px;
+
+    .navbar-brand {
+      padding-left: 58px;
+    }
+
   }
 
 }
 
 .navbar-brand {
-  display: block;
-  position: absolute;
-  bottom: 6px;
-  width: 48px;
+  padding-bottom: 0;
+  width: 136px;
   height: 0;
-  padding-top: 48px;
+  padding-top: @navbar-height;
   padding-bottom: 0;
   overflow: hidden;
-  background: url('img/totte-logga-40px.png') no-repeat;
+  background: url('img/totte-text-only-136x69.png') no-repeat center center;
 }
 
 .page-template-template-start-page-php {
@@ -59,9 +64,8 @@ body {
     line-height: 1.4em;
   }
 
-  .navbar-brand {
-    transition: bottom 0.5s;
-    bottom: -60px;
+  h2 {
+    .funny-header;
   }
 
   &.scrolled {
@@ -119,20 +123,7 @@ body {
   }
 
   .large-logo-wrapper {
-    position: absolute;
-    width: 190px;
-    height: 190px;
-    background: url('img/totte-logga.png') no-repeat center center;
-    //border-radius: 95px;
-    top: 32px;
-    opacity: .9;
-    //border: solid 6px #6fb052;
-    z-index: 4; // Lets have these elements over the hero background
-
-    span {
-      display: none;
-    }
-
+    display: none;
   }
 
   .outer-wrap {
@@ -146,7 +137,6 @@ body {
 }
 
 h1 {
-  font-family: 'Shadows Into Light', cursive;
   font-weight: 800;
   border: none;
 }
@@ -180,8 +170,13 @@ a {
 
 footer {
   padding: 18px 0;
-  background: #ace190;
+  background: #f5f5f5;
   border-top: solid 6px #6fb052;
+
+  h3 {
+    font-size: 20px;
+  }
+
 }
 
 .navbar-nav {
@@ -190,21 +185,10 @@ footer {
     font-weight: bold;
   }
 
-  a::after {
-    display: block;
-    margin-bottom: -18px;
-    width: 100%;
-    text-align: center
-  }
+}
 
-  .active a::after {;
-    content: '●' !important;
-  }
-
-  a:hover::after {
-    content: '•';
-  }
-
+.nav > li > a:hover {
+  text-decoration: underline;
 }
 
 iframe {
@@ -227,38 +211,25 @@ iframe {
 
 }
 
-@media (min-width: @screen-sm-min) {
+.menu-2 {
 
-  .navbar {
-
-    .logo-wrapper {
-      margin-left: 0;
-    }
-
+  li {
+    margin-left: 15px;
+    margin-top: 0;
   }
 
 }
 
-@media (min-width: @screen-md-min) {
-
-  .page-template-template-start-page-php {
-
-    h1 {
-      font-size: 36px;
-    }
-
-  }
-
+.fb-like {
+  //margin-top: 29px;
+  //right: 15px;
 }
 
-@media (min-width: @screen-lg-min) {
-
-  .page-template-template-start-page-php {
-
-    h1 {
-      font-size: 44px;
-    }
-
-  }
-
+header .fb_iframe_widget {
+  //position: absolute;
 }
+
+@import 'screen-sm-min.less';
+@import 'screen-md-min.less';
+@import 'screen-lg-min.less';
+@import 'pixel-ratio-min-2.less';
